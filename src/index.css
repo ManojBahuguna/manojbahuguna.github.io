@@ -5,3 +5,30 @@
 * {
   font-family: "Sora", sans-serif;
 }
+
+@layer components {
+  .Button {
+    @apply py-2 px-5 rounded-md shadow-md text-darkPrimary border-2 border-transparent font-semibold;
+    @apply hover:brightness-110 hover:shadow-lg;
+    @apply focus:outline;
+    @apply active:brightness-95 active:shadow-none;
+    @apply disabled:cursor-not-allowed disabled:shadow-none disabled:brightness-100 disabled:opacity-80;
+    @apply transition;
+    @apply whitespace-nowrap;
+  }
+
+  .OutlineButton {
+    @apply Button border-current;
+  }
+
+  .BrandButton {
+    @apply OutlineButton bg-accentLight;
+  }
+
+  .GhostButton {
+    @apply Button border-2 border-transparent shadow-none;
+    @apply shadow-none;
+    @apply transition ease-linear duration-100;
+    @apply md:hover:border-darkPrimary;
+  }
+}
