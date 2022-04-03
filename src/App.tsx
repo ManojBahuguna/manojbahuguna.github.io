@@ -1,7 +1,9 @@
+import { Hero } from "./sections/Hero";
+
 export function App() {
   return (
-    <div>
-      <h1>Manoj Bahuguna</h1>
+    <div className="bg-[url(grainy-gradient.svg)]">
+      <Hero />
     </div>
   );
 }
