@@ -15,7 +15,12 @@ export function Hero() {
         </p>
 
         <div className="inline-flex flex-wrap items-center justify-center gap-4 mt-8 sm:mt-12 sm:text-lg">
-          <a href={linkedinHref} className="BrandButton sm:py-3">
+          <a
+            href={linkedinHref}
+            className="BrandButton sm:py-3"
+            rel="noreferrer"
+            target="_blank"
+          >
             Connect on LinkedIn
           </a>
 
