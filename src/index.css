@@ -31,4 +31,18 @@
     @apply transition ease-linear duration-100;
     @apply md:hover:border-darkPrimary;
   }
+
+  .RecommendationQuote {
+    @apply relative;
+  }
+  .RecommendationQuote:before,
+  .RecommendationQuote:after {
+    @apply block text-5xl md:text-7xl absolute  m-0 p-0 text-white text-opacity-60;
+  }
+  .RecommendationQuote:before {
+    @apply content-[open-quote] left-0 top-0;
+  }
+  .RecommendationQuote:after {
+    @apply content-[close-quote] right-0 bottom-[-0.5em];
+  }
 }
