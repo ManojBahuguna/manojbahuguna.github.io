@@ -38,11 +38,17 @@
   .RecommendationQuote:before,
   .RecommendationQuote:after {
     @apply block text-5xl md:text-7xl absolute  m-0 p-0 text-white text-opacity-60;
+    transform: translateZ(60px);
   }
   .RecommendationQuote:before {
     @apply content-[open-quote] -left-3 top-0;
   }
   .RecommendationQuote:after {
     @apply content-[close-quote] -right-3 bottom-[-0.7em];
+  }
+
+  .Preserve3D,
+  .Preserve3D * {
+    transform-style: preserve-3d;
   }
 }

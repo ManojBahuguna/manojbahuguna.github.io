@@ -1,4 +1,5 @@
 import { Tab } from "@headlessui/react";
+import { useFollowCursor } from "../utils/useFollowCursor";
 
 const recommendationsData = [
   {
@@ -37,7 +38,7 @@ const recommendationsData = [
     personName: "Arjun Jassal",
     personImage:
       "https://media.licdn.com/dms/image/C5603AQES1_fLDDgWFA/profile-displayphoto-shrink_100_100/0/1535116653710?e=1678320000&v=beta&t=UsQq-tX1VD9Yzmbs6QpTLItSxE3CvFC5nFB-OVH5Z_E",
-    currentTitle: "Support Program Lead at Google | Ex-BlueAnt",
+    currentTitle: "Program Lead at Google | Ex-BlueAnt",
     content:
       "I was very impressed with Manoj's work at BlueAnt. During a very short time, he was able to create microsites, models and other web and mobile projects. He was also a team player and an absolute pleasure to work with. Any teams that works with Manoj will be lucky to have him.",
   },
@@ -53,7 +54,7 @@ const recommendationsData = [
     personName: "Aditya Pranav",
     personImage:
       "https://media.licdn.com/dms/image/C4D03AQEcrufyAMNWTg/profile-displayphoto-shrink_100_100/0/1663252583349?e=1678320000&v=beta&t=LFQVJQbJ2K7ggw0FM8v8R3Fu4d7r1sG2onH_ISuY9f0",
-    currentTitle: "VP of Engineering at Antino | Ex-MouseBelly",
+    currentTitle: "Engineering VP at Antino | Ex-MouseBelly",
     content:
       "Manoj is one of the best among all the people I have ever worked with. He was a very productive person, hardworking, broad-minded and forward-thinking individual.\nMost importantly, he's result-oriented, responsible and a technically sound employee and who's always ready to put all his energy and time to get the job done.\nHe has exceptional analytical skill and in-depth knowledge of JavaScript. The desire for proficiency and education makes Manoj a valuable asset to the team. Working with him is a signature of success.",
   },
@@ -74,7 +75,7 @@ function RecommendationPerson({
       className={
         "rounded-full text-left p-1 pr-6 flex gap-2 items-center bg-darkPrimary transition-all will-change-transform " +
         (selected
-          ? "bg-opacity-100 shadow-lg drop-shadow-lg -translate-y-0.5"
+          ? "bg-opacity-100 shadow-lg -translate-y-0.5"
           : "bg-opacity-30")
       }
     >
@@ -98,13 +99,22 @@ function RecommendationMessage({
   recommendation: typeof recommendationsData[number];
 }) {
   return (
-    <div className="relative pt-8 bg-darkPrimary text-lightPrimary rounded-xl shadow-lg drop-shadow-lg">
-      <span className="absolute -top-5 sm:left-7">
+    <div
+      className="relative pt-8 bg-darkPrimary text-lightPrimary rounded-xl shadow-lg"
+      style={{ transform: "translateZ(100px)" }}
+    >
+      <div
+        className="absolute -top-5 sm:left-7"
+        style={{ transform: "translateZ(90px)" }}
+      >
         <RecommendationPerson selected recommendation={recommendation} />
-      </span>
+      </div>
 
-      <div className="RecommendationQuote p-6 md:p-8 ">
-        <blockquote className="whitespace-pre-wrap md:text-lg font-light">
+      <div className="RecommendationQuote p-6 md:p-8">
+        <blockquote
+          className="whitespace-pre-wrap md:text-lg font-light"
+          style={{ transform: "translateZ(100px)" }}
+        >
           {recommendation.content}
         </blockquote>
       </div>
@@ -113,8 +123,13 @@ function RecommendationMessage({
 }
 
 export function Recommendations() {
+  const followCursor = useFollowCursor();
+
   return (
-    <div className="bg-darkPrimary bg-opacity-80">
+    <div
+      onMouseMove={followCursor.handleContainerMouseMove}
+      className="bg-darkPrimary bg-opacity-80"
+    >
       <div className="container py-24 sm:py-32">
         <h2 className="text-white mb-20">
           <small className="uppercase">I am</small>
@@ -125,13 +140,20 @@ export function Recommendations() {
         <Tab.Group>
           <Tab.Panels>
             {recommendationsData.map((recommendation) => (
-              <Tab.Panel key={recommendation.personName}>
+              <Tab.Panel
+                className={
+                  "bg-darkPrimary bg-opacity-30 shadow rounded-xl " +
+                  followCursor.className
+                }
+                style={followCursor.style}
+                key={recommendation.personName}
+              >
                 <RecommendationMessage recommendation={recommendation} />
               </Tab.Panel>
             ))}
           </Tab.Panels>
 
-          <Tab.List className="flex flex-wrap gap-4 my-4">
+          <Tab.List className="flex flex-wrap gap-4 my-8">
             {recommendationsData.map((recommendation) => (
               <Tab key={recommendation.personName}>
                 {({ selected }) => (
