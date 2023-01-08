@@ -38,7 +38,7 @@
   .RecommendationQuote:before,
   .RecommendationQuote:after {
     @apply block text-5xl md:text-7xl absolute  m-0 p-0 text-white text-opacity-60;
-    transform: translateZ(60px);
+    transform: translateZ(130px);
   }
   .RecommendationQuote:before {
     @apply content-[open-quote] -left-3 top-0;

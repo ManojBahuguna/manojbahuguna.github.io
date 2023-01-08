@@ -73,7 +73,7 @@ function RecommendationPerson({
   return (
     <div
       className={
-        "rounded-full text-left p-1 pr-6 flex gap-2 items-center bg-darkPrimary transition-all will-change-transform " +
+        "rounded-full text-left p-1 pr-6 flex gap-2 items-center bg-darkSecondary transition-all will-change-transform " +
         (selected
           ? "bg-opacity-100 shadow-lg -translate-y-0.5"
           : "bg-opacity-30")
@@ -100,12 +100,12 @@ function RecommendationMessage({
 }) {
   return (
     <div
-      className="relative pt-8 bg-darkPrimary text-lightPrimary rounded-xl shadow-lg"
+      className="relative pt-8 bg-darkPrimary bg-opacity-80 text-lightPrimary rounded-xl shadow-lg"
       style={{ transform: "translateZ(100px)" }}
     >
       <div
         className="absolute -top-5 sm:left-7"
-        style={{ transform: "translateZ(90px)" }}
+        style={{ transform: "translateZ(80px)" }}
       >
         <RecommendationPerson selected recommendation={recommendation} />
       </div>
@@ -128,13 +128,15 @@ export function Recommendations() {
   return (
     <div
       onMouseMove={followCursor.handleContainerMouseMove}
-      className="bg-darkPrimary bg-opacity-80"
+      className="bg-darkSecondary bg-opacity-70"
     >
       <div className="container py-24 sm:py-32">
         <h2 className="text-white mb-20">
-          <small className="uppercase">I am</small>
-          <span className="text-4xl font-bold block"> Recommended by </span>
-          <small className="uppercase">awesome people</small>
+          <small className="uppercase">I am </small>
+          <span className="text-3xl sm:text-5xl font-bold block">
+            Recommended by
+          </span>
+          <small className="uppercase"> awesome people</small>
         </h2>
 
         <Tab.Group>

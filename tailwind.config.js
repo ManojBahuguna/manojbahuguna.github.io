@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -8,9 +12,11 @@ module.exports = {
       darkSecondary: "#172C66",
       accentLight: "#F582AE",
       white: "white",
-      transparent: "transparent",
-      current: "currentColor",
-      black: "black",
+      transparent: colors.transparent,
+      current: colors.current,
+      black: colors.black,
+      gray: colors.gray,
+      slate: colors.slate,
     },
     extend: {
       container: {

@@ -3,7 +3,7 @@ const contactHref = "#contact";
 
 export function Hero() {
   return (
-    <div className="bg-lightSecondary bg-opacity-50">
+    <div className="bg-lightSecondary bg-opacity-80">
       <div className="container text-center sm:text-left py-24 sm:py-32">
         <h1 className="font-extrabold text-5xl sm:text-6xl text-darkPrimary">
           Manoj <small>Bahuguna</small>

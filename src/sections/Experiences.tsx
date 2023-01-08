@@ -113,8 +113,10 @@ function ExperienceItem({
   const { image, title, company, duration, labels, descriptions } = experience;
 
   return (
-    <div className="text-darkSecondary whitespace-pre-wrap sm:flex gap-4 items-start">
-      <div className="inline-block rounded-full overflow-hidden p-4 bg-white flex-shrink-0">
+    <div className="relative whitespace-pre-wrap sm:flex gap-4 items-start">
+      <div className="hidden sm:block w-px h-full absolute top-0 left-10 bg-darkSecondary shadow" />
+
+      <div className="relative inline-block rounded-full overflow-hidden p-4 bg-white flex-shrink-0">
         <img
           className="block w-12 h-12 object-contain"
           src={image}
@@ -122,17 +124,17 @@ function ExperienceItem({
         />
       </div>
 
-      <div className="inline-grid gap-4">
-        <div>
-          <h3 className="font-bold sm:text-xl">{title}</h3>
-          <p className="font-medium">{company}</p>
-          <p>{duration}</p>
+      <div className="relative inline-grid gap-6">
+        <div className="text-gray-200">
+          <p>{title}</p>
+          <h3 className="font-semibold sm:text-xl text-gray-100">{company}</h3>
+          <p className="text-sm text-gray-400">{duration}</p>
         </div>
 
         <div className="flex flex-wrap items-center gap-2 flex-1 flex-shrink-0">
           {labels.map((label) => (
             <span
-              className="bg-white py-px sm:py-1 px-2 sm:px-4 rounded text-darkPrimary font-semibold text-xs sm:text-sm"
+              className="bg-darkPrimary bg-opacity-50 text-gray-300 py-px sm:py-1 px-2 sm:px-4 rounded text-xs sm:text-sm"
               key={label}
             >
               {label}
@@ -144,7 +146,7 @@ function ExperienceItem({
           {descriptions.map((text) => (
             <li
               key={text}
-              className="text-sm sm:text-base sm:leading-snug max-w-2xl mb-2 sm:list-disc"
+              className="text-gray-300 font-light text-sm sm:text-base max-w-2xl mb-3 sm:list-disc"
             >
               {text}
             </li>
@@ -157,15 +159,17 @@ function ExperienceItem({
 
 export function Experiences() {
   return (
-    <div className="bg-lightPrimary bg-opacity-60">
+    <div className="bg-darkPrimary bg-opacity-80">
       <div className="container py-24 sm:py-32">
-        <h2 className="text-darkSecondary mb-20">
-          <small className="uppercase">The amazing</small>
-          <span className="text-4xl font-bold block"> Experiences </span>
-          <small className="uppercase">I have had</small>
+        <h2 className="text-white mb-20">
+          <small className="uppercase">The amazing </small>
+          <span className="text-3xl sm:text-5xl font-bold block">
+            Experiences
+          </span>
+          <small className="uppercase"> I have had</small>
         </h2>
 
-        <div className="grid gap-16">
+        <div className="grid gap-20">
           {experiencesData.map((experience) => (
             <ExperienceItem
               key={experience.title + experience.company}

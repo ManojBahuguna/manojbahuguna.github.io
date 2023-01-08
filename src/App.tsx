@@ -7,7 +7,7 @@ export function App() {
   return (
     <div className="bg-[url(grainy-gradient.svg)] bg-fixed">
       <SecondaryCursor />
-      <div className="relative z-20">
+      <div className="relative z-20 bg-[url(grainy-gradient.svg)]">
         <Hero />
         <Experiences />
         <Recommendations />
