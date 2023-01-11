@@ -17,7 +17,7 @@ function mapRange(
 }
 
 type MouseData = { x: number; y: number; width: number; height: number };
-function getTransform({ x, y, width, height }: MouseData, factor = 8) {
+function getTransform({ x, y, width, height }: MouseData, factor = 10) {
   const rotateY = mapRange(x, 0, width, -factor, factor);
   const rotateX = -mapRange(y, 0, height, -factor, factor);
 

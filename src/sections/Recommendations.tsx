@@ -133,7 +133,7 @@ export function Recommendations() {
       <div className="container py-24 sm:py-32">
         <h2 className="text-white mb-20">
           <small className="uppercase">I am </small>
-          <span className="text-3xl sm:text-5xl font-bold block">
+          <span className="FontFancy text-3xl sm:text-5xl font-bold block">
             Recommended by
           </span>
           <small className="uppercase"> awesome people</small>

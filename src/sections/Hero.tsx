@@ -3,13 +3,13 @@ const contactHref = "#contact";
 
 export function Hero() {
   return (
-    <div className="bg-lightSecondary bg-opacity-80">
+    <div className="bg-red bg-opacity-60">
       <div className="container text-center sm:text-left py-24 sm:py-32">
-        <h1 className="font-extrabold text-5xl sm:text-6xl text-darkPrimary">
+        <h1 className="FontFancy font-extrabold text-5xl sm:text-7xl md:text-8xl text-white">
           Manoj <small>Bahuguna</small>
         </h1>
 
-        <p className="text-xl sm:text-4xl sm:font-light sm:max-w-lg text-darkSecondary mt-4 sm:mt-6">
+        <p className="text-xl sm:text-4xl sm:font-light sm:max-w-lg text-lightPrimary mt-4 sm:mt-6">
           Engineering an <strong className="font-semibold">awe</strong>spiring
           future for all
         </p>
