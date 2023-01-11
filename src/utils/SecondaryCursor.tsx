@@ -22,7 +22,7 @@ export function SecondaryCursor() {
   return (
     <div
       className={
-        "w-px h-px absolute rounded-full drop-shadow-2xl shadow-[0_0_160px_96px_#000] blur-3xl " +
+        "w-px h-px absolute rounded-full drop-shadow-2xl shadow-[0_0_160px_140px_#0008] " +
         "transition-transform will-change-transform ease-out duration-[2s] "
       }
       style={{
