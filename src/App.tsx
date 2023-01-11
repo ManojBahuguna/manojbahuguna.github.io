@@ -5,9 +5,9 @@ import { SecondaryCursor } from "./utils/SecondaryCursor";
 
 export function App() {
   return (
-    <div className="bg-[url(grainy-gradient.svg)] bg-fixed">
+    <div className="bg-[url(assets/grainy-gradient.svg)] bg-fixed">
       <SecondaryCursor />
-      <div className="relative z-20 bg-[url(grainy-gradient.svg)]">
+      <div className="relative z-20 bg-[url(assets/grainy-gradient.svg)]">
         <Hero />
         <Experiences />
         <Recommendations />
