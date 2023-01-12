@@ -63,17 +63,20 @@ const recommendationsData = [
 function RecommendationPerson({
   selected,
   recommendation: { personName, currentTitle, personImage },
+  minimal, // in list, only show icon in small screens
 }: {
   selected: boolean;
   recommendation: Pick<
     typeof recommendationsData[number],
     "personName" | "currentTitle" | "personImage"
   >;
+  minimal?: boolean;
 }) {
   return (
     <div
       className={
-        "rounded-full text-left p-1 pr-6 flex gap-2 items-center bg-darkSecondary transition-all will-change-transform " +
+        "rounded-full text-left p-1 flex gap-2 items-center bg-darkSecondary transition-all will-change-transform " +
+        (minimal ? "md:pr-6 " : "pr-6 ") +
         (selected
           ? "bg-opacity-100 shadow-lg -translate-y-0.5"
           : "bg-opacity-30")
@@ -85,7 +88,7 @@ function RecommendationPerson({
         alt={personName}
       />
 
-      <div>
+      <div className={minimal ? "hidden md:block" : ""}>
         <h3 className="text-sm md:text-base text-white">{personName}</h3>
         <p className="text-xs text-lightSecondary">{currentTitle}</p>
       </div>
@@ -155,13 +158,14 @@ export function Recommendations() {
             ))}
           </Tab.Panels>
 
-          <Tab.List className="flex flex-wrap gap-4 my-8">
+          <Tab.List className="flex flex-wrap gap-2 md:gap-4 my-8">
             {recommendationsData.map((recommendation) => (
               <Tab key={recommendation.personName}>
                 {({ selected }) => (
                   <RecommendationPerson
                     selected={selected}
                     recommendation={recommendation}
+                    minimal
                   />
                 )}
               </Tab>
