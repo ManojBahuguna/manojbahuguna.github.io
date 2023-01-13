@@ -7,7 +7,7 @@ const links = [
 
 export function Contact() {
   return (
-    <div id="contact" className="bg-red bg-opacity-70">
+    <div id="contact" className="bg-red bg-opacity-60 md:bg-opacity-70">
       <div className="container py-24 sm:py-32 pb-32 sm:pb-48">
         <h2 className="text-white mb-20">
           <small className="uppercase">Ways to </small>
@@ -35,7 +35,7 @@ export function Contact() {
         <div>
           <p>
             <a
-              className="inline-block text-lg sm:text-2xl text-lightPrimary hover:text-white my-2 underline decoration-dotted decoration-4 break-all"
+              className="inline-block sm:text-2xl text-lightPrimary hover:text-white my-2 underline decoration-dotted decoration-4 break-all"
               href="mailto:manojbahugunamanoj@gmail.com"
               target="_blank"
               rel="noreferrer"
@@ -46,7 +46,7 @@ export function Contact() {
 
           <p>
             <a
-              className="inline-block text-lg sm:text-2xl text-lightPrimary hover:text-white my-2 underline decoration-dotted decoration-4"
+              className="inline-block sm:text-2xl text-lightPrimary hover:text-white my-2 underline decoration-dotted decoration-4"
               href="tel:+91-8586838473"
               target="_blank"
               rel="noreferrer"
@@ -55,7 +55,7 @@ export function Contact() {
             </a>
           </p>
 
-          <p className="text-white text-opacity-70 text-lg my-4">
+          <p className="text-white text-opacity-70 text-sm sm:text-lg my-4">
             New Delhi, India
           </p>
         </div>

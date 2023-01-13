@@ -3,6 +3,7 @@ import { Experiences } from "./sections/Experiences";
 import { Recommendations } from "./sections/Recommendations";
 import { SecondaryCursor } from "./utils/SecondaryCursor";
 import { Contact } from "./sections/Contact";
+import { getGrainsSvg } from "./utils/getGrainsSvg";
 
 function CreatorBanner() {
   return (
@@ -15,9 +16,12 @@ function CreatorBanner() {
 
 export function App() {
   return (
-    <div className="bg-[url(/grainy-gradient.svg)]">
+    <div style={{ backgroundImage: getGrainsSvg() }}>
       <SecondaryCursor />
-      <div className="relative z-20 bg-[url(/grainy-gradient.svg)]">
+      <div
+        className="relative z-20"
+        style={{ backgroundImage: getGrainsSvg(1) }}
+      >
         <Hero />
         <Experiences />
         <Recommendations />
