@@ -1,7 +1,7 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
-name: Install dependencies and build
+name: Publish to github pages
 
 on:
   push:
@@ -12,6 +12,9 @@ on:
 jobs:
   build:
     name: Build
+
+    permissions:
+      contents: "read" # to read dist/**
 
     runs-on: ubuntu-latest
 
@@ -33,7 +36,7 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v1
         with:
-          path: dist/**
+          path: ./dist
 
   deploy:
     name: Deploy to github pages
