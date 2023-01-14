@@ -7,7 +7,10 @@ const links = [
 
 export function Contact() {
   return (
-    <div id="contact" className="bg-red bg-opacity-60 md:bg-opacity-70">
+    <div
+      id="contact"
+      className="bg-red bg-opacity-60 md:bg-opacity-70 LargeCursor"
+    >
       <div className="container py-24 sm:py-32 pb-32 sm:pb-48">
         <h2 className="text-white mb-20">
           <small className="uppercase">Ways to </small>
