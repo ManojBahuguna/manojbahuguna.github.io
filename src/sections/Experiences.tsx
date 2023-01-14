@@ -108,7 +108,7 @@ const experiencesData = [
 function ExperienceItem({
   experience,
 }: {
-  experience: typeof experiencesData[number];
+  experience: (typeof experiencesData)[number];
 }) {
   const { image, title, company, duration, labels, descriptions } = experience;
 

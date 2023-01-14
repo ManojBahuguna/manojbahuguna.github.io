@@ -1,8 +1,8 @@
 import { Hero } from "./sections/Hero";
 import { Experiences } from "./sections/Experiences";
 import { Recommendations } from "./sections/Recommendations";
-import { SecondaryCursor } from "./utils/SecondaryCursor";
 import { Contact } from "./sections/Contact";
+import { SecondaryCursor } from "./utils/SecondaryCursor";
 import { getGrainsSvg } from "./utils/getGrainsSvg";
 
 function CreatorBanner() {

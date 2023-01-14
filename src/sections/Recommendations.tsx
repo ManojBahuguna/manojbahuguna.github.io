@@ -67,7 +67,7 @@ function RecommendationPerson({
 }: {
   selected: boolean;
   recommendation: Pick<
-    typeof recommendationsData[number],
+    (typeof recommendationsData)[number],
     "personName" | "currentTitle" | "personImage"
   >;
   minimal?: boolean;
@@ -99,7 +99,7 @@ function RecommendationPerson({
 function RecommendationMessage({
   recommendation,
 }: {
-  recommendation: typeof recommendationsData[number];
+  recommendation: (typeof recommendationsData)[number];
 }) {
   return (
     <div
