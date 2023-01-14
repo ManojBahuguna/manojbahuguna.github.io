@@ -16,7 +16,7 @@ function CreatorBanner() {
 
 export function App() {
   return (
-    <div style={{ backgroundImage: getGrainsSvg() }}>
+    <div className="group" style={{ backgroundImage: getGrainsSvg() }}>
       <SecondaryCursor />
       <div
         className="relative z-20"

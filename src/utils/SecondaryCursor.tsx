@@ -22,8 +22,8 @@ export function SecondaryCursor() {
   return (
     <div
       className={
-        "w-px h-px absolute rounded-full shadow-[0_0_160px_56px_#0008] md:shadow-[0_0_240px_112px_#000a] " +
-        "transition-transform will-change-transform ease-out duration-[2s] "
+        "w-px h-px absolute rounded-full shadow-[10px_14px_32px_10px_#0007] group-active:shadow-[0px_0px_20px_10px_#000f] blur " +
+        "transition-transform will-change-transform ease-out duration-200 "
       }
       style={{
         transform: `translateX(${x}px) translateY(${y}px)`,
