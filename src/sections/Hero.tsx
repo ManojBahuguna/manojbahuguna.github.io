@@ -6,7 +6,7 @@ export function Hero() {
     <div className="bg-red bg-opacity-60 md:bg-opacity-70 LargeCursor">
       <div className="container text-center sm:text-left py-24 sm:py-32">
         <h1 className="FontFancy font-extrabold text-5xl sm:text-7xl md:text-8xl text-white">
-          Manoj <small>Bahuguna</small>
+          Manoj <span className="text-[.75em]">Bahuguna</span>
         </h1>
 
         <p className="text-xl sm:text-4xl sm:font-light sm:max-w-lg text-lightPrimary mt-4 sm:mt-6">

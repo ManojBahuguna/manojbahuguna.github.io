@@ -126,19 +126,19 @@ function ExperienceItem({
 
       <div className="relative inline-grid gap-6">
         <div className="text-gray-200">
-          <p>{title}</p>
+          <h2>{title}</h2>
           <h3 className="font-semibold sm:text-xl text-gray-100">{company}</h3>
           <p className="text-sm text-gray-400">{duration}</p>
         </div>
 
         <div className="flex flex-wrap items-center gap-2 flex-1 flex-shrink-0">
           {labels.map((label) => (
-            <span
+            <h4
               className="bg-darkPrimary bg-opacity-50 text-gray-300 py-px sm:py-1 px-2 sm:px-4 rounded text-xs sm:text-sm"
               key={label}
             >
               {label}
-            </span>
+            </h4>
           ))}
         </div>
 
@@ -159,7 +159,7 @@ function ExperienceItem({
 
 export function Experiences() {
   return (
-    <div className="bg-darkPrimary bg-opacity-80">
+    <div id="Experiences" className="bg-darkPrimary bg-opacity-80">
       <div className="container py-24 sm:py-32">
         <h2 className="text-white mb-20">
           <small className="uppercase">The amazing </small>

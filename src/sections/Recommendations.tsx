@@ -90,7 +90,7 @@ function RecommendationPerson({
 
       <div className={minimal ? "hidden md:block" : ""}>
         <h3 className="text-sm md:text-base text-white">{personName}</h3>
-        <p className="text-xs text-lightSecondary">{currentTitle}</p>
+        <h3 className="text-xs text-lightSecondary">{currentTitle}</h3>
       </div>
     </div>
   );
@@ -103,6 +103,7 @@ function RecommendationMessage({
 }) {
   return (
     <div
+      id="Recommendations"
       className="relative pt-8 bg-darkPrimary bg-opacity-80 text-lightPrimary rounded-xl shadow-lg"
       style={{ transform: "translateZ(100px)" }}
     >
