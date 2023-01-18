@@ -103,7 +103,6 @@ function RecommendationMessage({
 }) {
   return (
     <div
-      id="Recommendations"
       className="relative pt-8 bg-darkPrimary bg-opacity-80 text-lightPrimary rounded-xl shadow-lg"
       style={{ transform: "translateZ(100px)" }}
     >
@@ -131,6 +130,7 @@ export function Recommendations() {
 
   return (
     <div
+      id="Recommendations"
       onMouseMove={followCursor.handleContainerMouseMove}
       className="bg-darkSecondary bg-opacity-70"
     >
@@ -144,20 +144,21 @@ export function Recommendations() {
         </h2>
 
         <Tab.Group>
-          <Tab.Panels>
-            {recommendationsData.map((recommendation) => (
-              <Tab.Panel
-                className={
-                  "bg-darkPrimary bg-opacity-30 shadow rounded-xl " +
-                  followCursor.className
-                }
-                style={followCursor.style}
-                key={recommendation.personName}
-              >
-                <RecommendationMessage recommendation={recommendation} />
-              </Tab.Panel>
-            ))}
-          </Tab.Panels>
+          <div
+            className={
+              "bg-darkPrimary bg-opacity-30 shadow rounded-xl " +
+              followCursor.className
+            }
+            style={followCursor.style}
+          >
+            <Tab.Panels>
+              {recommendationsData.map((recommendation) => (
+                <Tab.Panel key={recommendation.personName}>
+                  <RecommendationMessage recommendation={recommendation} />
+                </Tab.Panel>
+              ))}
+            </Tab.Panels>
+          </div>
 
           <Tab.List className="flex flex-wrap gap-2 md:gap-4 my-8">
             {recommendationsData.map((recommendation) => (
