@@ -1,9 +1,30 @@
 const experiencesData = [
   {
+    image: "orgs/flytbase.webp",
+    title: "Senior Software Engineer",
+    company: "FlytBase",
+    duration: "2023 - present",
+    labels: [
+      "IoT",
+      "Full-Stack",
+      "Angular",
+      "React.js",
+      "Node.js",
+      "Typescript",
+      "CSS",
+      "Drones",
+      "Sensors",
+    ],
+    descriptions: [
+      "Embarked on the journey to revolutionize Drone Autonomy",
+      //
+    ],
+  },
+  {
     image: "orgs/cruise.png",
     title: "Full-Stack Engineer",
     company: "Cruise LLC",
-    duration: "2022 - present",
+    duration: "2022 - 2023",
     labels: [
       "Full-Stack",
       "React.js",
