@@ -5,19 +5,20 @@ const experiencesData = [
     company: "FlytBase",
     duration: "2023 - present",
     labels: [
-      "IoT",
       "Full-Stack",
+      "Architecture",
       "Angular",
-      "React.js",
       "Node.js",
       "Typescript",
+      "MongoDB",
+      "AWS",
       "CSS",
       "Drones",
-      "Sensors",
     ],
     descriptions: [
-      "Embarked on the journey to revolutionize Drone Autonomy",
-      //
+      "Worked on revamp of frontend and backend architecture to improve scalability, user experience and developer experience.",
+      "Built POCs using different technologies including WebSockets, MQTT, Angular and more to help with the architecture decisions.",
+      "Guided the team toward following best development practices to build more resilient products.",
     ],
   },
   {
