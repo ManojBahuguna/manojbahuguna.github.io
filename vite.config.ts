@@ -21,6 +21,7 @@ export default defineConfig({
     VitePWA({
       registerType: "autoUpdate",
       manifest,
+      includeAssets: ["meta/*", "people/*", "orgs/*"], // static assets folders here
       workbox: {
         navigateFallbackAllowlist: [], // app routes will go here if added
       },
