@@ -1,9 +1,30 @@
 const experiencesData = [
   {
+    image: "orgs/cimet.jpg",
+    title: "Senior Software Engineer",
+    company: "CIMET",
+    duration: "2023 - present",
+    labels: [
+      "AI",
+      "Full-Stack",
+      "Architecture",
+      "Next.js",
+      "React.js",
+      "Node.js",
+      "Typescript",
+      "LLMs",
+      "PostgreSQL",
+      "GraphQL",
+    ],
+    descriptions: [
+      "Spearheading AI-driven innovations at CIMET to revolutionize plan comparison products",
+    ],
+  },
+  {
     image: "orgs/flytbase.webp",
     title: "Senior Software Engineer",
     company: "FlytBase",
-    duration: "2023 - present",
+    duration: "2023",
     labels: [
       "Full-Stack",
       "Architecture",
@@ -25,7 +46,7 @@ const experiencesData = [
     image: "orgs/cruise.png",
     title: "Full-Stack Engineer",
     company: "Cruise LLC",
-    duration: "2022 - 2023",
+    duration: "2022",
     labels: [
       "Full-Stack",
       "React.js",
