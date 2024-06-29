@@ -47,19 +47,8 @@ export function Contact() {
             </a>
           </p>
 
-          <p>
-            <a
-              className="inline-block sm:text-2xl text-lightPrimary hover:text-white my-2 underline decoration-dotted decoration-4"
-              href="tel:+91-8586838473"
-              target="_blank"
-              rel="noreferrer"
-            >
-              +91 8586 8384 73
-            </a>
-          </p>
-
           <p className="text-white text-opacity-70 text-sm sm:text-lg my-4">
-            New Delhi, India
+            India
           </p>
         </div>
       </div>

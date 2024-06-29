@@ -17,6 +17,13 @@ const recommendationsData = [
       "Manoj is a well-rounded software engineer who can come up with creative solutions to complex problems and execute on them.\nHe's very productive, learns fast, asks good questions and collaborates well with others. I'm super happy to have him on our team!",
   },
   {
+    personName: "Xing Gou",
+    personImage: "people/xing-gou.jpg",
+    currentTitle: "Engineering Manager | CIMET",
+    content:
+      "Working with Manoj has been fantastic. His technical skills are remarkable, and he excels in mentoring others and leading projects. He communicates effectively across teams and manages the release process seamlessly.\nHis contributions to AI projects showcase his adaptability and innovation. Manoj is an exceptional professional, bringing both technical expertise and leadership qualities to the team. It's a pleasure to work alongside him.",
+  },
+  {
     personName: "Vibhanshu Chaturvedi",
     personImage: "people/vibhanshu-chaturvedi.jpg",
     currentTitle: "Software Engineer at OLX | Ex-DataPeace",
