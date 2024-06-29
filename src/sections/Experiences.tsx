@@ -1,9 +1,32 @@
 const experiencesData = [
   {
+    image: "orgs/datapeace.jpg",
+    title: "Chief Technology Officer (Hands-On CTO)",
+    company: "DataPeace AI Technologies",
+    duration: "2024 - present",
+    labels: [
+      "Leadership",
+      "Product Management",
+      "Research",
+      "AI",
+      "Computer Vision",
+      "Full-Stack",
+      "Architecture",
+      "Next.js",
+      "React.js",
+      "Node.js",
+      "Typescript",
+      "LLMs",
+      "PostgreSQL",
+      "GraphQL",
+    ],
+    descriptions: [],
+  },
+  {
     image: "orgs/cimet.jpg",
     title: "Senior Software Engineer",
     company: "CIMET",
-    duration: "2023 - present",
+    duration: "2023 - 2024",
     labels: [
       "AI",
       "Full-Stack",
@@ -15,9 +38,13 @@ const experiencesData = [
       "LLMs",
       "PostgreSQL",
       "GraphQL",
+      "TTS (Text to speech)",
+      "ASR (Automatic speech recognition)",
     ],
     descriptions: [
-      "Spearheading AI-driven innovations at CIMET to revolutionize plan comparison products",
+      "Managed and mentored an international tech team, conducting code reviews and establishing best development practices and processes.",
+      "Developed text and audio-based AI agent using technologies like Large Language Models (LLM), Text-To-Speech (TTS), Automatic Speech Recognition (ASR) and more.",
+      "Architected and managed web applications for plans comparison utilizing Next.js, React, Node.js, PostgreSQL, Elasticsearch, Docker, and other cutting-edge technologies.",
     ],
   },
   {
@@ -215,7 +242,7 @@ export function Experiences() {
         <div className="grid gap-20">
           {experiencesData.map((experience) => (
             <ExperienceItem
-              key={experience.title + experience.company}
+              key={experience.title + experience.company + experience.duration}
               experience={experience}
             />
           ))}
