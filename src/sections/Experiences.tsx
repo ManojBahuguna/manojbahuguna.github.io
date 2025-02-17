@@ -1,7 +1,38 @@
 const experiencesData = [
   {
+    image: "orgs/cruise.png",
+    title: "Senior Software Engineer - AI",
+    company: "Cruise LLC",
+    duration: "2024 - 2025",
+    labels: [
+      "Full-Stack",
+      "Architecture",
+      "React.js",
+      "Node.js",
+      "Typescript",
+      "GraphQL",
+      "PostgreSQL",
+      "Prisma",
+      "tRPC",
+      "Data Visualization",
+      "Tailwind CSS",
+      "BigQuery",
+      "Docker",
+      "Three.js",
+      "GCP",
+    ],
+    descriptions: [
+      "Developed DataExplorer, a sophisticated platform for visualizing and analyzing data from diverse sources, featuring pivot tables, dynamic filtering, sorting, aggregations, grouping, conditional formatting, custom cell rendering, and interactive charting.",
+      "Developed a docs editor with markdown support, real-time preview, and embedded React components to enhance document creation and collaboration.",
+      "Engineered a GIF export feature to generate animations from time-series data visualizations, enhancing data storytelling capabilities.",
+      "Packaged Data Explorer as a reusable library, enabling seamless integration across multiple projects and improving development efficiency.",
+      "Implemented a File Explorer feature for managing and browsing documentation efficiently within the platform.",
+      "Collaborated across teams to define new feature requirements, resolve critical bugs, and provide ongoing technical support to improve system stability and user experience.",
+    ],
+  },
+  {
     image: "orgs/datapeace.jpg",
-    title: "Chief Technology Officer (Hands-On CTO)",
+    title: "Chief Technology Officer (Fractional CTO)",
     company: "DataPeace AI Technologies",
     duration: "2024 - present",
     labels: [
@@ -20,7 +51,11 @@ const experiencesData = [
       "PostgreSQL",
       "GraphQL",
     ],
-    descriptions: [],
+    descriptions: [
+      "Spearheaded innovation by brainstorming, researching, and prototyping new product ideas, successfully leading one from concept to production launch.",
+      "Led development for a text and audio-based AI agent using LLMs, Text-To-Speech (TTS), Automatic Speech Recognition (ASR), RAG, Web Scraping, and more.",
+      "Mentored and led the tech team, managed the product roadmap, and collaborated with stakeholders to align the tech with business goals.",
+    ],
   },
   {
     image: "orgs/cimet.jpg",

@@ -3,11 +3,11 @@ import { useFollowCursor } from "../utils/useFollowCursor";
 
 const recommendationsData = [
   {
-    personName: "Vasudev Vashisht",
-    personImage: "people/vasudev-vashisht.jpg",
-    currentTitle: "Data Scientist at VMware | Ex-MouseBelly",
+    personName: "Xing Gou",
+    personImage: "people/xing-gou.jpg",
+    currentTitle: "Engineering Manager | CIMET",
     content:
-      "Manoj is a very strong asset to any team he joins. He has a knack for picking up new technologies easily and is a brilliant problem solver. His tenacity and determination is praiseworthy. Also, he is a great team player and gets along with everyone.\nHis go getter attitude will take him places and set him apart everywhere he goes. I wish him all the best in what he does.",
+      "Working with Manoj has been fantastic. His technical skills are remarkable, and he excels in mentoring others and leading projects. He communicates effectively across teams and manages the release process seamlessly.\nHis contributions to AI projects showcase his adaptability and innovation. Manoj is an exceptional professional, bringing both technical expertise and leadership qualities to the team. It's a pleasure to work alongside him.",
   },
   {
     personName: "Audrey Li",
@@ -17,11 +17,11 @@ const recommendationsData = [
       "Manoj is a well-rounded software engineer who can come up with creative solutions to complex problems and execute on them.\nHe's very productive, learns fast, asks good questions and collaborates well with others. I'm super happy to have him on our team!",
   },
   {
-    personName: "Xing Gou",
-    personImage: "people/xing-gou.jpg",
-    currentTitle: "Engineering Manager | CIMET",
+    personName: "Vasudev Vashisht",
+    personImage: "people/vasudev-vashisht.jpg",
+    currentTitle: "Data Scientist at VMware | Ex-MouseBelly",
     content:
-      "Working with Manoj has been fantastic. His technical skills are remarkable, and he excels in mentoring others and leading projects. He communicates effectively across teams and manages the release process seamlessly.\nHis contributions to AI projects showcase his adaptability and innovation. Manoj is an exceptional professional, bringing both technical expertise and leadership qualities to the team. It's a pleasure to work alongside him.",
+      "Manoj is a very strong asset to any team he joins. He has a knack for picking up new technologies easily and is a brilliant problem solver. His tenacity and determination is praiseworthy. Also, he is a great team player and gets along with everyone.\nHis go getter attitude will take him places and set him apart everywhere he goes. I wish him all the best in what he does.",
   },
   {
     personName: "Vibhanshu Chaturvedi",
