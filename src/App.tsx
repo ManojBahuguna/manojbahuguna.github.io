@@ -1,4 +1,5 @@
 import { Hero } from "./sections/Hero";
+import { Summary } from "./sections/Summary";
 import { Experiences } from "./sections/Experiences";
 import { Recommendations } from "./sections/Recommendations";
 import { Contact } from "./sections/Contact";
@@ -29,6 +30,7 @@ export function App() {
         style={{ backgroundImage: getGrainsSvg(1) }}
       >
         <Hero />
+        <Summary />
         <Experiences />
         <Recommendations />
         <Contact />

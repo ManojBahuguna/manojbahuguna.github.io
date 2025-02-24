@@ -219,8 +219,8 @@ function ExperienceItem({
   const { image, title, company, duration, labels, descriptions } = experience;
 
   return (
-    <div className="relative whitespace-pre-wrap sm:flex gap-4 items-start">
-      <div className="hidden sm:block w-px h-full absolute top-0 left-10 bg-darkSecondary shadow print:left-7" />
+    <div className="relative whitespace-pre-wrap sm:flex gap-4 items-start print:py-1">
+      <div className="hidden sm:block w-px h-full absolute top-0 left-10 bg-darkSecondary shadow print:left-7 print:top-1" />
 
       <div className="relative inline-block rounded-full overflow-hidden p-4 bg-white flex-shrink-0 print:p-2">
         <img
