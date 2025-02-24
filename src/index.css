@@ -63,3 +63,13 @@ li {
     transform-style: preserve-3d;
   }
 }
+
+@media print {
+  .container {
+    padding: 16px !important;
+  }
+
+  .FontFancy {
+    font-family: "Sora", sans-serif;
+  }
+}

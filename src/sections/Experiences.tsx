@@ -22,10 +22,10 @@ const experiencesData = [
       "GCP",
     ],
     descriptions: [
-      "Developed DataExplorer, a sophisticated platform for visualizing and analyzing data from diverse sources, featuring pivot tables, dynamic filtering, sorting, aggregations, grouping, conditional formatting, custom cell rendering, and interactive charting.",
-      "Developed a docs editor with markdown support, real-time preview, and embedded React components to enhance document creation and collaboration.",
-      "Engineered a GIF export feature to generate animations from time-series data visualizations, enhancing data storytelling capabilities.",
-      "Packaged Data Explorer as a reusable library, enabling seamless integration across multiple projects and improving development efficiency.",
+      "Developed DataExplorer, a solution for visualizing and analyzing data from diverse sources, featuring pivot tables, dynamic filtering, sorting, aggregations, grouping, conditional formatting, custom cell rendering, and interactive charting.",
+      "Developed a docs editor with support for markdown, real-time preview, and embedded React components to enhance document creation and collaboration.",
+      "Collaborated on development of an early-stage ML eval tool designed to monitor and evaluate the performance of ML models used by autonomous vehicles.",
+      "Packaged DataExplorer as a reusable library, enabling seamless integration across multiple projects and improving development efficiency.",
       "Implemented a File Explorer feature for managing and browsing documentation efficiently within the platform.",
       "Collaborated across teams to define new feature requirements, resolve critical bugs, and provide ongoing technical support to improve system stability and user experience.",
     ],
@@ -53,7 +53,7 @@ const experiencesData = [
     ],
     descriptions: [
       "Spearheaded innovation by brainstorming, researching, and prototyping new product ideas, successfully leading one from concept to production launch.",
-      "Led development for a text and audio-based AI agent using LLMs, Text-To-Speech (TTS), Automatic Speech Recognition (ASR), RAG, Web Scraping, and more.",
+      "Led development for a text and audio-based AI agent using LLMs, Text-To-Speech (TTS), Speech Recognition, RAG, Web Scraping, and more.",
       "Mentored and led the tech team, managed the product roadmap, and collaborated with stakeholders to align the tech with business goals.",
     ],
   },
@@ -78,7 +78,8 @@ const experiencesData = [
     ],
     descriptions: [
       "Managed and mentored an international tech team, conducting code reviews and establishing best development practices and processes.",
-      "Developed text and audio-based AI agent using technologies like Large Language Models (LLM), Text-To-Speech (TTS), Automatic Speech Recognition (ASR) and more.",
+      "Leveraged AI to automate and improve efficiency in quality assessment of audio calls and form inputs of agents.",
+      "Developed text and audio-based AI agent using technologies like Large Language Models (LLM), Text-To-Speech (TTS), Speech Recognition and more.",
       "Architected and managed web applications for plans comparison utilizing Next.js, React, Node.js, PostgreSQL, Elasticsearch, Docker, and other cutting-edge technologies.",
     ],
   },
@@ -219,27 +220,29 @@ function ExperienceItem({
 
   return (
     <div className="relative whitespace-pre-wrap sm:flex gap-4 items-start">
-      <div className="hidden sm:block w-px h-full absolute top-0 left-10 bg-darkSecondary shadow" />
+      <div className="hidden sm:block w-px h-full absolute top-0 left-10 bg-darkSecondary shadow print:left-7" />
 
-      <div className="relative inline-block rounded-full overflow-hidden p-4 bg-white flex-shrink-0">
+      <div className="relative inline-block rounded-full overflow-hidden p-4 bg-white flex-shrink-0 print:p-2">
         <img
-          className="block w-12 h-12 object-contain"
+          className="block w-12 h-12 object-contain print:w-10 print:h-10"
           src={image}
           alt={company}
         />
       </div>
 
-      <div className="relative inline-grid gap-6">
+      <div className="relative inline-grid gap-6 print:gap-2">
         <div className="text-gray-200">
           <h2>{title}</h2>
-          <h3 className="font-semibold sm:text-xl text-gray-100">{company}</h3>
-          <p className="text-sm text-gray-400">{duration}</p>
+          <h3 className="font-semibold sm:text-xl text-gray-100 print:sm:text-base">
+            {company}
+          </h3>
+          <p className="text-sm text-gray-300 print:text-xs">{duration}</p>
         </div>
 
         <div className="flex flex-wrap items-center gap-2 flex-1 flex-shrink-0">
           {labels.map((label) => (
             <h4
-              className="bg-darkPrimary bg-opacity-50 text-gray-300 py-px sm:py-1 px-2 sm:px-4 rounded text-xs sm:text-sm"
+              className="bg-darkPrimary bg-opacity-50 text-gray-300 py-px sm:py-1 px-2 sm:px-4 rounded text-xs sm:text-sm print:sm:text-xs"
               key={label}
             >
               {label}
@@ -251,7 +254,7 @@ function ExperienceItem({
           {descriptions.map((text) => (
             <li
               key={text}
-              className="text-gray-300 font-light text-sm sm:text-base max-w-2xl mb-3 sm:list-disc"
+              className="text-gray-300 font-light text-sm sm:text-base max-w-2xl mb-3 sm:list-disc print:sm:text-sm print:mb-1.5 print:max-w-3xl"
             >
               {text}
             </li>
@@ -266,15 +269,15 @@ export function Experiences() {
   return (
     <div id="Experiences" className="bg-darkPrimary bg-opacity-80">
       <div className="container py-24 sm:py-32">
-        <h2 className="text-white mb-20">
-          <small className="uppercase">The amazing </small>
-          <span className="FontFancy text-3xl sm:text-5xl font-bold block">
+        <h2 className="text-white mb-20 print:mb-4">
+          <small className="uppercase print:hidden">The amazing </small>
+          <span className="FontFancy text-3xl sm:text-5xl font-bold block print:text-xl print:sm:text-xl">
             Experiences
           </span>
-          <small className="uppercase"> I have had</small>
+          <small className="uppercase print:hidden"> I have had</small>
         </h2>
 
-        <div className="grid gap-20">
+        <div className="grid gap-20 print:gap-8">
           {experiencesData.map((experience) => (
             <ExperienceItem
               key={experience.title + experience.company + experience.duration}

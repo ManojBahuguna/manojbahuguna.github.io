@@ -132,7 +132,7 @@ export function Recommendations() {
     <div
       id="Recommendations"
       onMouseMove={followCursor.handleContainerMouseMove}
-      className="bg-darkSecondary bg-opacity-70"
+      className="bg-darkSecondary bg-opacity-70 print:hidden"
     >
       <div className="container py-24 sm:py-32">
         <h2 className="text-white mb-20">

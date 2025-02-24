@@ -7,7 +7,13 @@ import { getGrainsSvg } from "./utils/getGrainsSvg";
 
 function CreatorBanner() {
   return (
-    <p className="from-[#911c] to-[#114a] bg-gradient-to-b text-white shadow-2xl text-center py-4 font-extralight italic text-opacity-60 hover:text-opacity-100 transition-colors cursor-default">
+    <p className="from-[#911c] to-[#114a] bg-gradient-to-b text-white shadow-2xl text-center py-4 font-extralight italic text-opacity-60 hover:text-opacity-100 transition-colors cursor-default print:text-xs print:py-2">
+      <span className="hidden print:inline">
+        <a href="https://monob.in" className="text-white">
+          monob.in
+        </a>{" "}
+        -{" "}
+      </span>
       Designed and developed by <strong>Manoj Bahuguna</strong>.{" "}
       <span className="animate-ping inline-block not-italic">💓</span>
     </p>
